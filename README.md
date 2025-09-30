@@ -16,7 +16,7 @@ It demonstrates how to build, train, and evaluate a binary classification model 
   - numpy  
 
 ### Training vs Testing Loss & Accuracy
-![Loss and Accuracy Curveshttps]([Results/loss_curve.png](https://github.com/Huthaifa24/Binary-classification-on-synthetic-data/blob/5a6fc70052770e77cddacd26bfea5d54c6ece3d9/Results/Train_test_plot.png))
+![Loss and Accuracy Curveshttps](https://github.com/Huthaifa24/Binary-classification-on-synthetic-data/blob/63f76e94632fc96ada87f2476d3ca44bd227141c/Results/Train_test_plot.png)
 
 ### Decision Boundary Visualization
 ![Decision Boundary and Data Visualization](https://github.com/Huthaifa24/Binary-classification-on-synthetic-data/blob/5a6fc70052770e77cddacd26bfea5d54c6ece3d9/Results/Desecion_Boundary.png)
