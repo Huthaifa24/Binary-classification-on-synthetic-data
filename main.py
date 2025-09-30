@@ -4,8 +4,6 @@ import pandas as pd
 from sklearn.datasets import make_circles
 from sklearn.model_selection import train_test_split
 
-from model import CircleModel_v0
-from helper_fn import plot_decision_boundary, accuracy_fn
 
 n_samples = 1400
 
@@ -40,13 +38,12 @@ X_train, X_test, y_train, y_test = train_test_split(X,
                                                     random_state=42)
 ##print(f"{len(X_train), len(X_test), len(y_train), len(y_test)}") "Used for testing the data"
 
-#Building a model
-
 # writing device-agnostic code
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Instantiating a model
+from model import CircleModel_v0
 model_1 =CircleModel_v0().to(device)
 
 
@@ -68,6 +65,7 @@ epochs = 1600
 X_train, y_train = X_train.to(device), y_train.to(device)
 X_test, y_test = X_test.to(device), y_test.to(device)
 
+from helper_fn import accuracy_fn
 train_losses, test_losses = [], []
 train_accs, test_accs = [], []
 
@@ -108,6 +106,10 @@ for epoch in range(epochs):
         if epoch %200 == 0:
             print(f"Epoch:{epoch} | Loss:{loss:.5f} | Acc:{acc:.2f}% | Teset Loss: {test_loss:.5f} | Test Acc{test_acc:.2f} ")
 
+
+
+
+from helper_fn import plot_decision_boundary, accuracy_fn
 
 plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
